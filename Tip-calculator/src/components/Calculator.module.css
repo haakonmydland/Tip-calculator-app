@@ -1,0 +1,181 @@
+.Container {
+  background-color: var(--White);
+  padding: 2rem;
+  border-radius: 1.5rem 1.5rem 0 0;
+  max-width: 375px;
+  gap: 2em;
+  display: grid;
+}
+
+.Calc {
+  display: grid;
+  gap: 2em;
+}
+
+/* Bill and number of people */
+
+.Header {
+  font-weight: 700;
+  color: var(--Dark-grayish-cyan);
+  padding-bottom: 10px;
+}
+
+.InputContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background-color: var(--Very-light-grayish-cyan);
+  border-radius: 5px;
+  border: 2px solid var(--White);
+}
+.InputContainer > svg {
+  position: absolute;
+  left: 10px;
+}
+.Input {
+  background: none;
+  border: none;
+  padding: 10px 20px;
+  text-align: right;
+  font-size: var(--FS-form-inputs);
+  font-weight: 700;
+  color: var(--Very-dark-cyan);
+  width: 100%;
+}
+.InputContainer:hover,
+.InputContainer:focus {
+  border: 2px solid var(--Strong-cyan);
+}
+
+/* Select Tip */
+
+.TipForm {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.2em;
+}
+
+.TipBtn {
+  background-color: var(--Very-dark-cyan);
+  color: var(--White);
+  border-radius: 5px;
+  padding: 10px;
+  font-size: var(--FS-form-inputs);
+  font-weight: 700;
+  text-align: center;
+}
+.TipRadio[type="radio"]:checked + .TipBtn {
+  background-color: var(--Strong-cyan);
+  color: var(--Very-dark-cyan);
+}
+.TipBtn:hover,
+.TipBtn:focus,
+.TipRadio[type="radio"]:focus + .TipBtn {
+  background-color: var(--Light-grayish-cyan);
+  color: var(--Very-dark-cyan);
+}
+
+.TipRadio {
+  /* display: none; */
+  opacity: 0;
+  width: 0;
+  height: 0;
+  position: absolute;
+}
+
+.TipInput {
+  background-color: var(--Very-light-grayish-cyan);
+  border-radius: 5px;
+  padding: 10px 20px 10px 0px;
+  text-align: right;
+  font-size: var(--FS-form-inputs);
+  font-weight: 700;
+  color: var(--Very-dark-cyan);
+  width: calc(100% - 20px);
+  border: 2px solid var(--White);
+}
+.TipInput:hover,
+.TipInput:focus-visible {
+  border: 2px solid var(--Strong-cyan);
+}
+
+/* Results */
+
+.Results {
+  background-color: var(--Very-dark-cyan);
+  padding: 2rem;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.3em;
+  justify-content: space-between;
+}
+
+.InfoContainer {
+  display: grid;
+  gap: 1.3em;
+}
+.Info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+
+.Results .Header {
+  color: var(--White);
+  padding: 0;
+}
+.Results .Sub {
+  color: var(--Dark-grayish-cyan);
+  font-weight: 700;
+}
+
+.Amount {
+  justify-self: end;
+  color: var(--Strong-cyan);
+  font-size: 2.4em;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.Reset {
+  width: 100%;
+  background-color: var(--Strong-cyan);
+  border: none;
+  padding: 10px;
+  font-size: var(--FS-form-inputs);
+  font-weight: 700;
+  color: var(--Very-dark-cyan);
+  text-transform: uppercase;
+  border-radius: 5px;
+}
+
+.Reset:hover,
+.Reset:focus {
+  background-color: var(--Light-grayish-cyan);
+}
+
+.Reset:disabled {
+  opacity: 0.3;
+  background-color: var(--Strong-cyan);
+}
+
+@media screen and (min-width: 700px) {
+  .Container {
+    max-width: 800px;
+    grid-template-columns: 1fr 1fr;
+    border-radius: 1rem;
+  }
+  .TipForm {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .TipBtn,
+  .TipInput {
+    font-size: clamp(18px, 2vw, var(--FS-form-inputs));
+  }
+  .InfoContainer {
+    padding-top: 1em;
+    display: grid;
+    gap: 2em;
+  }
+}
