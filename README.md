@@ -31,8 +31,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [frontendmentor.io](https://www.frontendmentor.io/solutions/tip-calculator-app-react-typescript-zTr5ZR2wYc)
+- Live Site URL: [tip-calculator-app-myd.pages.dev](https://tip-calculator-app-myd.pages.dev/)
 
 ## My process
 
